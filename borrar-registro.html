@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'none'; style-src 'self'; script-src 'self'; img-src 'self'; connect-src https://nykddykyageaxbeqivaa.supabase.co; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>Borrar mi registro · Bóveda</title>
+  <link rel="stylesheet" href="estilo.css">
+  <script src="borrar.js" defer></script>
+</head>
+<body>
+  <main>
+    <p class="marca"><a href="./">Bóveda</a></p>
+    <h1>Borrar mi registro</h1>
+    <p>
+      Bóveda es un gestor de contraseñas, documentos, imágenes y fechas para Android. <strong>Todo eso vive solo en tu
+      teléfono, cifrado</strong>: nunca llega a nuestro servidor. Lo único que guardamos es tu <strong>correo de
+      recuperación</strong> (cifrado), para enviarte un código si olvidas tu patrón.
+    </p>
+
+    <h2>Desde la app</h2>
+    <p>Abre Bóveda → <strong>Ajustes</strong> → <strong>Correo de recuperación</strong> → <strong>Eliminar mi registro</strong>.</p>
+
+    <h2>Sin la app</h2>
+    <p>Si ya no tienes la app o el teléfono, escribe el correo que registraste. Te enviaremos un código para confirmar que es tuyo.</p>
+
+    <section id="paso-correo">
+      <label for="correo">Correo de recuperación</label>
+      <input id="correo" type="email" autocomplete="email" inputmode="email" maxlength="254" required>
+      <button id="enviar" type="button">Enviarme un código</button>
+    </section>
+
+    <section id="paso-codigo" hidden>
+      <p>Si ese correo está registrado, te enviamos un código de 6 dígitos. Revisa también la carpeta de spam. Vence en 10 minutos.</p>
+      <label for="codigo">Código</label>
+      <input id="codigo" type="text" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" maxlength="6" required>
+      <button id="confirmar" type="button">Borrar mi registro</button>
+      <button id="otro" type="button" class="secundario">Usar otro correo</button>
+    </section>
+
+    <section id="paso-listo" hidden>
+      <p class="listo">Listo: se borró tu correo de nuestro servidor, junto con sus códigos. Ya no podrás recuperar tu patrón por correo.</p>
+    </section>
+
+    <p id="mensaje" role="status" aria-live="polite"></p>
+
+    <h2>Qué se borra y qué no</h2>
+    <ul>
+      <li><strong>Se borra al momento:</strong> tu correo cifrado, el identificador al azar de tu instalación y los códigos pendientes. No guardamos copias.</li>
+      <li><strong>No lo tenemos:</strong> tus claves, documentos, imágenes y fechas. Están solo en tu teléfono; para borrarlos, desinstala la app o bórralos desde ella.</li>
+      <li>Tus copias de respaldo (<code>.boveda</code>) las guardas tú: bórralas de donde las hayas puesto.</li>
+    </ul>
+  </main>
+</body>
+</html>
