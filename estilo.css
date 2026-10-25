@@ -85,3 +85,12 @@ button:disabled { opacity: .55; cursor: wait; }
 #mensaje { min-height: 1.5em; }
 #mensaje.error { color: var(--error); font-weight: 600; }
 .listo { color: var(--ok); font-weight: 600; margin: 0; }
+
+/* Términos y Privacidad (H58) */
+.legal h1 { font-size: 1.6rem; }
+.legal h2 { font-size: 1.1rem; }
+.legal table { width: 100%; border-collapse: collapse; margin: 12px 0 20px; font-size: .92rem; display: block; overflow-x: auto; }
+.legal th, .legal td { border: 1px solid var(--borde); padding: 8px 10px; text-align: left; vertical-align: top; }
+.legal th { background: var(--tarjeta); }
+.legal blockquote { margin: 16px 0; padding: 8px 16px; border-left: 4px solid var(--acento); background: var(--tarjeta); }
+.pie { margin-top: 40px; color: var(--suave); font-size: .9rem; border-top: 1px solid var(--borde); padding-top: 16px; }
